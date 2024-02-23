@@ -17,4 +17,4 @@ RUN osrm-extract -p /opt/car.lua /data/greece-latest.osm.pbf && \
 EXPOSE 5000
 
 # Run OSRM HTTP server
-CMD ["osrm-routed", "--algorithm", "mld", "/data/greece-latest.osrm"]
+CMD ["osrm-routed", "--max-table-size=1000" "--algorithm", "mld", "/data/greece-latest.osrm"]
